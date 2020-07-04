@@ -13,6 +13,8 @@ int gcd_naive(int a, int b) {
 }
 
 int gcd_fast(int a, int b) {
+    //	Euclidean algorithm to calculate the gcd of two numners
+    //	calculte a%b until b becomes 0;
     return b ? gcd_fast(b, a % b) : a;
 }
 

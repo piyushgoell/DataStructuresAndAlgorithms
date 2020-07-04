@@ -36,7 +36,8 @@ int fibonacci_sum_fast(long long n) {
     // Initial values:
     long long a = 0, b = 1;
     long long ans = 0, sum = 1;
-
+	
+	// Loop to generate the Fibonacci Numbers
     for (int i = 1; i < iterations; i++) {
         ans = (a + b) % 10;
         a = b;
