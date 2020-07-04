@@ -5,7 +5,7 @@ long long get_fibonacci_huge_naive(long long n, long long m) {
         return n;
 
     long long previous = 0;
-    long long current  = 1;
+    long long current = 1;
 
     for (long long i = 0; i < n - 1; ++i) {
         long long tmp_previous = previous;
@@ -17,28 +17,29 @@ long long get_fibonacci_huge_naive(long long n, long long m) {
 }
 long long get_pisano_period(long long m) {
     long long a = 0, b = 1, c = a + b;
-    for (int i = 0; i < m * m; i++) {
+    for (int i = 1; i <= m * m; i++) {
         c = (a + b) % m;
         a = b;
         b = c;
-        if (a == 0 && b == 1) 
-		return i + 1;
+        if (a == 0 && b == 1)
+            return i;
     }
 }
-long long get_fibonacci_huge_fast(long long n, long long m) {
+int get_fibonacci_huge_fast(long long n, long long m) {
+    m = get_pisano_period(m);
+    if (n % m <= 1)
+        return n % m;
+    long long iterations = n % m;
 
-	long long iterations = n % get_pisano_period(m);
-	if(n ==0 || n ==1)
-		return n;
-	long long a=0, b=1;
-	long long ans = iterations;
-	
-	for(long long i= 1; i < iterations ; i++){
-		ans = (a + b)%m;
-		a = b;
-		b = ans;
-	}
-    return ans%m;
+    long long a = 0, b = 1;
+    long long ans = 0;
+
+    for (long long i = 1; i < iterations; i++) {
+        ans = (a + b) % m;
+        a = b;
+        b = ans;
+    }
+    return ans % m;
 }
 
 int main() {
@@ -46,5 +47,5 @@ int main() {
     std::cin >> n >> m;
     //std::cout << get_fibonacci_huge_naive(n, m) << '\n';
     std::cout << get_fibonacci_huge_fast(n, m) << '\n';
-    
+
 }
