@@ -20,7 +20,7 @@ int compute_min_refills(int dist, int fullTank, vector<int>& stops) {
 		if (currentRefillLocation + fullTank >= dist)
 			return refillCount;
 
-		else if (currentRefillLocation == stops[currentIndex - 1])
+		if (currentRefillLocation == stops[currentIndex - 1])
 			return -1;
 
 		refillCount += 1;
