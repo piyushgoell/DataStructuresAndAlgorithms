@@ -4,55 +4,51 @@
 #include <vector>
 
 using std::vector;
-
+enum type
+{
+  Left,
+  Point,
+  Right,
+};
 struct int3
 {
   long long point;
   long long role;
   long long index;
 };
-enum type
-{
-  Left,
-  Right,
-  Point,
-};
 
 vector<long long> fast_count_segments(vector<long long> starts, vector<long long> ends, vector<long long> points)
 {
   vector<long long> cnt(points.size());
   vector<int3> vec;
+  vec.reserve(starts.size() + ends.size() + points.size());
   for (size_t i = 0; i < starts.size(); i++)
-    vec.push_back({starts[i], Left, i});
+    vec.push_back({starts[i], Left, (int)i});
+
   for (size_t i = 0; i < ends.size(); i++)
-    vec.push_back({ends[i], Right, i});
+    vec.push_back({ends[i], Right, (int)i});
+
   for (size_t i = 0; i < points.size(); i++)
-    vec.push_back({points[i], Point, i});
+    vec.push_back({points[i], Point, (int)i});
 
   std::sort(vec.begin(), vec.end(), [](const int3 &lhs, const int3 &rhs) {
     if (lhs.point == rhs.point)
-      if (lhs.role == Left && rhs.role == Point)
-        return true;
-      else if (lhs.role == Point && rhs.role == Right)
-        return true;
-      else
-        return false;
-    else if (lhs.point < rhs.point)
-      return true;
+      return lhs.role < rhs.role;
     else
-      return false;
+      return lhs.point < rhs.point;
   });
+  // std::cout << "********\n";
   // for (auto i : vec)
   //   std::cout << i.point << " " << i.role << "\n";
-  long long count = 0;
-  for (auto i : vec)
+  size_t count = 0;
+  for (size_t i = 0; i < vec.size(); i++)
   {
-    if (i.role == 0)
+    if (vec[i].role == Left)
       count++;
-    if (i.role == 1)
+    else if (vec[i].role == Point)
+      cnt[vec[i].index] = count;
+    else
       count--;
-    if (i.role == 2)
-      cnt[i.index] = count;
   }
   return cnt;
 }
