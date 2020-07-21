@@ -26,10 +26,10 @@ double calculate(vector<std::pair<size_t, size_t>> &xy, size_t left, size_t righ
 
   // Base Condition : for two points
   // calculate the distance between two points
-  //if (right - left == 1)
-  //  return get_distance({xy[left], xy[right]});
+  if (right - left == 1)
+    return get_distance({xy[left], xy[right]});
 
-  if (right - left <= 2)
+  if (right - left == 2)
     return min(min(get_distance({xy[left], xy[left + 1]}), get_distance({xy[left], xy[right]})), get_distance({xy[left + 1], xy[right]}));
   // find the middle value
   size_t mid = left + (right - left) / 2;
@@ -42,25 +42,23 @@ double calculate(vector<std::pair<size_t, size_t>> &xy, size_t left, size_t righ
   // find the minimum distance of two calculated distances
   double d = min(d1, d2);
 
-  //std::cout << d1 << " " << d2 << " " << d << "\n";
-
+  // now sort the above array based on Y
+  std::sort(xy.begin() + left, xy.begin() + right, [](const std::pair<size_t, size_t> &lhs, const std::pair<size_t, size_t> &rhs) {
+    return lhs.second < rhs.second;
+  });
   // Grab the points lying on the section mid +- d and store them into seperate array
   vector<std::pair<size_t, size_t>> points;
-  size_t line = xy[left].first + (xy[right].first - xy[left].first) / 2;
+  //size_t line = xy[left].first + (xy[right].first - xy[left].first) / 2;
+  double line = (xy[left].first + xy[right].second) / 2;
   for (size_t i = left; i <= right; i++)
     if (abs(xy[i].first - line) < d) //Check the condition abs works for +-
       points.push_back(xy[i]);
 
-  // now sort the above array based on Y
-  std::sort(points.begin(), points.end(), [](const std::pair<size_t, size_t> &lhs, const std::pair<size_t, size_t> &rhs) {
-    return lhs.second < rhs.second;
-  });
-
   // Now split the section mid +- d into d distance blocks and find the pair of points inside these d blocks
   // whose distance is less than d;
   for (size_t i = 0; i < points.size(); i++)
-    for (size_t j = i + 1; j <= min(i + 8, points.size()); j++)
-      if (points[i].second - points[j].second < d)
+    for (size_t j = i + 1; j <= min(i + 9, points.size()); j++)
+      if (points[j].second - points[i].second < d)
         d = min(d, get_distance({xy[i], xy[j]}));
 
   return d;
