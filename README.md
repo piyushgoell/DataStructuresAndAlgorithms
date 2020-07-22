@@ -2,6 +2,19 @@
 
 I have great learning experience with this course [Algorithmic ToolBox](https://www.coursera.org/learn/algorithmic-toolbox?) offered by University of California San Diego. I suggest anyone who want to apply right algorithm at right place should opt for this course. This course will give you deep insights of many standard popular algrithms like Divide and Conquer, Greedy and Dynamic Programming.
 
+<div align="center">
+
+[![GitHub issues](https://img.shields.io/github/contributors/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions)](https://github.com/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions)](https://github.com/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions/issues)
+[![GitHub forks](https://img.shields.io/github/forks/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions)](https://github.com/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions/network)
+[![GitHub stars](https://img.shields.io/github/stars/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions)](https://github.com/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions/stargazers)
+[![GitHub license](https://img.shields.io/github/license/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions)](https://github.com/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions/LICENSE)
+<img src="https://img.shields.io/github/watchers/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions" />
+<img src="https://img.shields.io/github/languages/top/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions"> 
+
+
+</div>
+
 ## Week 1 : Basic Understanding
   1. [The Sum](/Week%201/1%20Sum%20of%20two%20digits)
   2. [Maximum Pairwise Product](/Week%201/2%20Maximum%20Pairwise%20Product)
