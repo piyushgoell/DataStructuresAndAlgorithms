@@ -1,8 +1,5 @@
-# **Coursera-Algorithmic-Toolbox-Solutions**
-
-I have great learning experience with this course [Algorithmic ToolBox](https://www.coursera.org/learn/algorithmic-toolbox?) offered by University of California San Diego. I suggest anyone who want to apply right algorithm at right place should opt for this course. This course will give you deep insights of many standard popular algrithms like Divide and Conquer, Greedy and Dynamic Programming.
-
 <div align="center">
+
 
 [![GitHub issues](https://img.shields.io/github/contributors/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions)](https://github.com/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions/contributors)
 [![GitHub issues](https://img.shields.io/github/issues/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions)](https://github.com/piyushgoell/Coursera-Algorithmic-Toolbox-Solutions/issues)
@@ -14,6 +11,11 @@ I have great learning experience with this course [Algorithmic ToolBox](https://
 
 
 </div>
+
+# **Coursera-Algorithmic-Toolbox-Solutions**
+
+I have great learning experience with this course [Algorithmic ToolBox](https://www.coursera.org/learn/algorithmic-toolbox?) offered by University of California San Diego. I suggest anyone who want to apply right algorithm at right place should opt for this course. This course will give you deep insights of many standard popular algrithms like Divide and Conquer, Greedy and Dynamic Programming.
+
 
 ## Week 1 : Basic Understanding
   1. [The Sum](/Week%201/1%20Sum%20of%20two%20digits)
