@@ -12,7 +12,7 @@
 
 </div>
 
-# **Coursera-Algorithmic-Toolbox-Solutions**
+# **Coursera Algorithmic Toolbox Solutions**
 
 I have great learning experience with this course [Algorithmic ToolBox](https://www.coursera.org/learn/algorithmic-toolbox?) offered by University of California San Diego. I suggest anyone who want to apply right algorithm at right place should opt for this course. This course will give you deep insights of many standard popular algrithms like Divide and Conquer, Greedy and Dynamic Programming.
 
