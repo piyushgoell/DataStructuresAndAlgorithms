@@ -3,7 +3,7 @@
 I have great learning experience with this course [Algorithmic ToolBox](https://www.coursera.org/learn/algorithmic-toolbox?) offered by University of California San Diego. . I suggest everyone who want to apply right algorithm at right place should opt for this course. This course will give you deep insights of many standard popular algrithms. 
 
 ## Week 1 : Basic Understanding
-    1. [The Sum](Week 1/1 Sum of two digits)
+    1. [The Sum](/Week 1/1 Sum of two digits.cpp)
     2. Maximum Pairwise Product
    
 ## Week 2 : Algorithmic Warm-up
